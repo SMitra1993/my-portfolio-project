@@ -5,40 +5,40 @@ import "./index.scss";
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
 
-const Portfolio = () => { 
+const Certification = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
-    const [portfolio, setPortfolio] = useState([]);
+    const [certificate, setCertificate] = useState([]);
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setLetterClass('text-animate-hover');
-    //     }, 3000);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLetterClass('text-animate-hover');
+        }, 3000);
 
-    //     return () => {
-    //         clearTimeout(timer);
-    //     }
-    // });
+        return () => {
+            clearTimeout(timer);
+        }
+    });
 
-    // useEffect(() => {
-    //     getPortfolio();
-    // }, []);
+    useEffect(() => {
+        getCertificate();
+    }, []);
 
-    // const getPortfolio = async () => {
-    //     const querySnapshot = await getDocs(collection(db, 'portfolio'));
-    //     setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
-    // }
+    const getCertificate = async () => {
+        const querySnapshot = await getDocs(collection(db, 'portfolio'));
+        setCertificate(querySnapshot.docs.map((doc) => doc.data()));
+    }
 
-    const renderPortfolio = (portfolio) => {
+    const renderCertificate = (certificate) => {
         return (
             <div className="images-container">
                 {
-                    portfolio.map((port, idx) => {
+                    certificate.map((port, idx) => {
                         return (
                             <div className="image-box" key={idx}>
                                 <img 
                                 src={port.image}
                                 className="portfolio-image"
-                                alt="portfolio" />
+                                alt="certificate" />
                                 <div className="content">
                                     <p className="title">{port.name}</p>
                                     <h4 className="description">{port.description}</h4>
@@ -62,15 +62,15 @@ const Portfolio = () => {
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={"Portfolio".split("")}
+                        strArray={"Certification".split("")}
                         idx={15}
                     />
                 </h1>
-                <div>{renderPortfolio(portfolio)}</div>
+                <div>{renderCertificate(certificate)}</div>
             </div>
             <Loader type="pacman" />
         </>
     );
 }
 
-export default Portfolio;
+export default Certification;
