@@ -90,7 +90,13 @@
       }
     }
 
-    a.portfolio-link {
+    a.project-link {
+      &:after {
+        content: 'PROJECT';
+      }
+    }
+
+    a.certificate-link {
       &:after {
         content: 'CERTIFICATION';
       }

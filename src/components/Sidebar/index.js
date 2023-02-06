@@ -7,6 +7,7 @@ import {
   faLinkedin,
   faGithub,
   faDiscord,
+  faMedium,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -16,6 +17,7 @@ import {
   faBars,
   faClose,
   faCertificate,
+  faSuitcase,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -29,7 +31,7 @@ const Sidebar = () => {
         to="/"
         onClick={() => setShowNav(false)}>
         <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
+        <img className="sub-logo" src={LogoSubtitle} alt="souvik" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink 
@@ -48,7 +50,15 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           activeclassname="active"
-          className="portfolio-link"
+          className="project-link"
+          to="project"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          activeclassname="active"
+          className="certificate-link"
           to="certification"
           onClick={() => setShowNav(false)}
         >
@@ -98,12 +108,12 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://discord.com/"
+            href="https://medium.com/@thesouvikmitra"
             rel="noreferrer"
             target="_blank"
           >
             <FontAwesomeIcon
-              icon={faDiscord}
+              icon={faMedium}
               color="#4d4d4e"
               className="anchor-icon"
             />

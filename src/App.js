@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 import Certification from './components/Certification'
 import Dashboard from './components/Dashboard'
 import './App.scss'
+import Project from './components/Projects'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/certification" element={<Certification />} />
+          <Route path="/project" element={<Project />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
       </Routes>

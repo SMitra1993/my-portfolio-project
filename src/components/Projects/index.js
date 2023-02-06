@@ -5,9 +5,9 @@ import "./index.scss";
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
 
-const Certification = () => { 
+const Project = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
-    const [certificate, setCertificate] = useState([]);
+    const [project, setProject] = useState([]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -20,25 +20,25 @@ const Certification = () => {
     });
 
     useEffect(() => {
-        getCertificate();
+        getProject();
     }, []);
 
-    const getCertificate = async () => {
-        const querySnapshot = await getDocs(collection(db, 'certification'));
-        setCertificate(querySnapshot.docs.map((doc) => doc.data()));
+    const getProject = async () => {
+        const querySnapshot = await getDocs(collection(db, 'portfolio'));
+        setProject(querySnapshot.docs.map((doc) => doc.data()));
     }
 
-    const renderCertificate = (certificate) => {
+    const renderProject = (project) => {
         return (
             <div className="images-container">
                 {
-                    certificate.map((port, idx) => {
+                    project.map((port, idx) => {
                         return (
                             <div className="image-box" key={idx}>
                                 <img 
                                 src={port.image}
                                 className="portfolio-image"
-                                alt="certificate" />
+                                alt="project" />
                                 <div className="content">
                                     <p className="title">{port.name}</p>
                                     <h4 className="description">{port.description}</h4>
@@ -62,15 +62,15 @@ const Certification = () => {
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={"Certification".split("")}
+                        strArray={"Project".split("")}
                         idx={15}
                     />
                 </h1>
-                <div>{renderCertificate(certificate)}</div>
+                <div>{renderProject(project)}</div>
             </div>
             <Loader type="pacman" />
         </>
     );
 }
 
-export default Certification;
+export default Project;

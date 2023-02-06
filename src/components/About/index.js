@@ -34,7 +34,7 @@ const About = () => {
           </h1>
           <p style={{ fontFamily: 'system-ui', fontSize: '14px' }}>
             I'm a very ambitious front-end developer working in one of the
-            established IT company in India. I am currently leading a fabulous
+            established IT company in India for 7.5 years now. I am currently leading a fabulous
             team, dealing with lots of opportunities to work along with the
             latest technologies which has created a really challenging &
             exciting work environement.
@@ -47,7 +47,7 @@ const About = () => {
           <p style={{ fontFamily: 'system-ui', fontSize: '14px' }}>
             If I need to define myself in one sentence that would be a honest
             and friendly person, a sports fanatic, a enthusiast chef, a
-            passionate artist and tech-obsessed!!!
+            passionate artist and tech-obsessed person !!!
           </p>
         </div>
 
