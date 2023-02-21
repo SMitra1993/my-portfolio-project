@@ -24,8 +24,8 @@ const Project = () => {
     }, []);
 
     const getProject = async () => {
-        const querySnapshot = await getDocs(collection(db, 'portfolio'));
-        setProject(querySnapshot.docs.map((doc) => doc.data()));
+        const querySnapshot = await getDocs(collection(db, 'project'));
+        setProject(querySnapshot.docs.map((doc) => doc.data()).sort((doc1, doc2) => doc2.id - doc1.id));
     }
 
     const renderProject = (project) => {

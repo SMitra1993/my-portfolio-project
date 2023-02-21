@@ -49,9 +49,10 @@ const Contact = () => {
             />
           </h1>
           <p style={{ fontFamily: 'system-ui', fontSize: '14px' }}>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            I am interested in new opportunities - especially on exciting
+            technologies or large projects. However, if you have any other
+            requests or questions, don't hesitate to contact me using below form
+            either.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
@@ -85,14 +86,27 @@ const Contact = () => {
                 </li>
                 <li>
                   <textarea
-                    style={{ fontFamily: 'system-ui', fontSize: '14px', resize: 'none' }}
+                    style={{
+                      fontFamily: 'system-ui',
+                      fontSize: '14px',
+                      resize: 'none',
+                    }}
                     placeholder="Message"
                     name="message"
                     required
                   ></textarea>
                 </li>
                 <li>
-                  <input style={{ fontFamily: 'system-ui', fontSize: '14px', cursor: 'pointer' }} type="submit" className="flat-button" value="SEND" />
+                  <input
+                    style={{
+                      fontFamily: 'system-ui',
+                      fontSize: '14px',
+                      cursor: 'pointer',
+                    }}
+                    type="submit"
+                    className="flat-button"
+                    value="SEND"
+                  />
                 </li>
               </ul>
             </form>
@@ -110,7 +124,7 @@ const Contact = () => {
           Kolkata - 700010 <br />
           <br />
           <span style={{ fontFamily: 'system-ui', fontSize: '14px' }}>
-            msouvik38@gmail.com
+            <a style={{ fontFamily: 'system-ui', fontSize: '14px', color: 'white' }} href="mailto:msouvik38@gmail.com">msouvik38@gmail.com</a>
           </span>
         </div>
         <div className="map-wrap">

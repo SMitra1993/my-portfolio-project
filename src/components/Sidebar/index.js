@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
   faGithub,
-  faDiscord,
   faMedium,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons'
@@ -21,7 +20,7 @@ import {
   faDownload,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
-import CV from '../../assets/pdf/cv.pdf'
+import CV from '../../assets/pdf/Souvik_Mitra_Resume.pdf'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false)
@@ -79,6 +78,7 @@ const Sidebar = () => {
             download
             icon={faDownload}
             color="#4d4d4e"
+            onClick={() => window.open(CV)}
           />
         </a>
         <FontAwesomeIcon
