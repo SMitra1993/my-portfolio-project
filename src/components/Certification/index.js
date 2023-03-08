@@ -44,19 +44,19 @@ const Certification = () => {
               <div className="content">
                 <p
                   className="title"
-                  style={{ 'font-family': 'Coolvetica', color: '#ffd700' }}
+                  style={{ fontFamily: 'Coolvetica', color: '#ffd700' }}
                 >
                   {port.name}
                 </p>
                 <h4
                   className="description"
-                  style={{ 'font-family': 'Coolvetica', color: '#ffd700' }}
+                  style={{ fontFamily: 'Coolvetica', color: '#ffd700' }}
                 >
                   {port.description}
                 </h4>
                 <button
                   className="btn"
-                  style={{ 'font-family': 'Coolvetica' }}
+                  style={{ fontFamily: 'Coolvetica' }}
                   onClick={() => window.open(port.url)}
                 >
                   View &nbsp;

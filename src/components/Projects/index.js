@@ -42,18 +42,18 @@ const Project = () => {
             <div className="image-box" key={idx}>
               <img src={port.image} className="portfolio-image" alt="project" />
               <div className="content">
-                <p className="title" style={{ 'font-family': 'Coolvetica', 'color': '#ffd700' }}>
+                <p className="title" style={{ fontFamily: 'Coolvetica', 'color': '#ffd700' }}>
                   {port.name}
                 </p>
                 <h4
                   className="description"
-                  style={{ 'font-family': 'Coolvetica', 'color': '#ffd700' }}
+                  style={{ fontFamily: 'Coolvetica', 'color': '#ffd700' }}
                 >
                   {port.description}
                 </h4>
                 <button
                   className="btn"
-                  style={{ 'font-family': 'Coolvetica' }}
+                  style={{ fontFamily: 'Coolvetica' }}
                   onClick={() => window.open(port.url)}
                 >
                   View
